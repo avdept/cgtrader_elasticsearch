@@ -1,11 +1,12 @@
 # CGTrader Search Assignment
 
 ## Preview
+![pika-1699473146614-1x](https://github.com/avdept/cgtrader_elasticsearch/assets/1757017/74615bf7-5be0-4b15-8003-5f799be8ce32)
 
 
 
 ## Description
-This is simple search app using ruby on rails, postgres and elasticsearch. For initial dataset I've used following dataset `https://huggingface.co/datasets/Gustavosta/Stable-Diffusion-Prompts`. In order to pull the data into database I've created simple script which can be invoked by simply running `bundle exec rake db:seed` or manually invoking `ImportData.new.call` from rails console.
+This is simple search app using ruby on rails, postgres and elasticsearch made for CGTrader assignment. For initial dataset I've used following dataset `https://huggingface.co/datasets/Gustavosta/Stable-Diffusion-Prompts`. In order to pull the data into database I've created simple script which can be invoked by simply running `bundle exec rake db:seed` or manually invoking `ImportData.new.call` from rails console.
 
 ## Installation & Usage
 
