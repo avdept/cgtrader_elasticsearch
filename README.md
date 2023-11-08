@@ -17,13 +17,13 @@ This is simple search app using ruby on rails, postgres and elasticsearch made f
 * `bundle exec rake db:create db:migrate db:seed` to fill database with prompts from `db/data.json` file
 * Make sure you have `elasticsearch` running on port `9200`
 * Run `bin/dev` to start server
-* Open `http://localhost:3005` in your browser and try to search for some words
+* Open [http://localhost:3005](http://localhost:3005) in your browser and try to search for some words
 
 
 #### Docker
 
 * Simply run `docker-compose up` and give it a time to boot up. Please note first launch might take some time, up to 1-2 mins depending on computer specs, because it imports data
-* Open `http://localhost:3005` in your browser and try to search for some words
+* Open [http://localhost:3005](http://localhost:3005) in your browser and try to search for some words
 
 ## Future improvements
 
