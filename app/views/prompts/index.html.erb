@@ -1,0 +1,55 @@
+<%= form_tag(root_path, method: :get, class: "", data: { turbo: true }) do |f| %>
+  <div
+    class="mx-auto mt-40 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded-2xl gap-2 shadow-2xl focus-within:border-gray-300">
+    <%= text_field_tag :prompt, params[:prompt], placeholder: 'Keywords or prompts', class: 'px-6 py-2 w-full rounded-md flex-1 outline-none bg-white' %>
+    <button
+          class="w-full md:w-auto px-6 py-3 bg-black border-black text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all disabled:opacity-70">
+      <div class="relative">
+        <div class="flex items-center transition-all opacity-1 valid:"><span
+                      class="text-sm font-semibold whitespace-nowrap truncate mx-auto">
+            Search
+          </span>
+        </div>
+      </div>
+    </button>
+  </div>
+<% end %>
+
+<% if @items %>
+
+
+  <div class="flex flex-col max-w-3xl mx-auto mt-10">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <table class="max-w-3xl divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  ID
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <% @items.each do |item| %>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900"><%= item.id %></div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="text-sm text-gray-900 break-all"><%= item.description %></div>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<% end %>
